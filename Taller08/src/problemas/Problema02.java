@@ -4,6 +4,9 @@
  */
 package problemas;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -15,6 +18,21 @@ public class Problema02 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner entrada = new Scanner(System.in);
+            entrada.useLocale(Locale.US);
+            int contador = 0;
+            double gradosF;
+            double gradosC;
+            String cadena = "";
+       
+            for(gradosF = 20; gradosF <= 100; gradosF += 4){
+                gradosC = (5.0/9.0)*(gradosF - 32);
+                cadena = String.format("%s\nOperación(%d) Fahrenheit: %.2f ===> Celcius: %.2f", cadena, contador, gradosF, gradosC);
+                contador += 1;
+           
+           
+          }
+            System.out.println(cadena);
     }
     
 }
